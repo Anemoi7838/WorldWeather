@@ -1,11 +1,25 @@
 //const data = 'Hello World！'; // 渡したいデータ
-var data = region;
+const data = "Hello";
 /*$.ajaxSetup({
 　　headers: {
 　　　'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 　　}
 　});*/
 　$.ajax({
+            type:"GET",
+            url:"/sample",
+            data:{"data":data},
+            scriptCharset:"utf-8"
+        })
+        .then(
+            function(param){
+                console.log(param);
+            },
+            function(XMLHttpRequest,textStatus,errorThrown){
+                console.log("エラーが発生しました：" + textStatus + ":\n" + errorThrown);
+            });
+
+/*　$.ajax({
 　　　type : "GET",
 　　　//なければ不要(data)
 　　　data: {
@@ -22,4 +36,4 @@ var data = region;
 　　　error : function(XMLHttpRequest, textStatus, errorThrown) {
 　　　　alert("エラーが発生しました：" + textStatus + ":\n" + errorThrown);
 　　　}
-　});
+　});*/

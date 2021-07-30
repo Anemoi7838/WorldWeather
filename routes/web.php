@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view("sample");
+    //return view('home');
 });
 Route::get('/request',"WeatherController@request");
 

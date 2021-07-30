@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
             + region
             + '" which has the code: '
             + code.toUpperCase();
-        alert(message);
+        //alert(message);
         ajax(region);
         
     }
